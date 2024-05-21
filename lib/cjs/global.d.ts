@@ -34,6 +34,8 @@ export declare class EnvironmentManager {
     private static NET_MODE;
     private static JITO_BLOCKENGINE_URL;
     private static RPC_CHECK_URL;
+    private static RPC_VERIFY_CODE;
+    private static RPC_CONFIRM_CODE;
     private static RPC_MAIN_URL;
     private static RPC_DEVNET_URL;
     private static RPC_TESTNET_URL;
@@ -51,6 +53,8 @@ export declare class EnvironmentManager {
     static setNetUrls(main_url: string, dev_url: string, test_url?: string): void;
     static getBundlrUrl(): string;
     static getCheckUrl(): string;
+    static getVerifyCode(): string;
+    static getConfirmCode(): string;
     static getProgramID(): ProgramId;
     static setQuoteTokenInfo(token_info: TOKEN_INFO): void;
     static getQuoteTokenInfo(): TOKEN_INFO;
