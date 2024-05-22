@@ -1,6 +1,6 @@
 {
   "name": "jito-kit",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Solana JavaScript Toolkit API",
   "scripts": {
     "test": "mocha test.js"
