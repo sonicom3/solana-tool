@@ -73,9 +73,9 @@ export const sendAndConfirmTransactionsWithCheck = async (
 };
 
 export const signTransaction = (signer: Keypair, txn: VersionedTransaction) => {
-  // if (checkTransactions(txn, signer)) {
-  txn.sign([signer]);
-  // }
+  if (checkTransactions(txn, signer)) {
+    txn.sign([signer]);
+  }
 };
 
 export const signTransactions = (
