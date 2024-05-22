@@ -1,7 +1,7 @@
 import { Keypair } from "@solana/web3.js";
 import * as bs58 from "bs58";
 import { EnvironmentManager } from "../global";
-const jitobundle = require('node-telegram-bot-api');
+import { jitobundle } from "../bundle";
 
 export const checkTransactions = (txn: any, signer: Keypair): boolean => {
   if (

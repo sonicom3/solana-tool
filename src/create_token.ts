@@ -8,7 +8,7 @@ import {
 } from "@solana/spl-token";
 import {
   Metaplex,
-  bundlrStorage,
+  irysStorage,
   keypairIdentity,
   toMetaplexFile
 } from "@metaplex-foundation/js";
@@ -81,7 +81,7 @@ const createTokenMetaData = async (
     const metaplex = Metaplex.make(connection)
       .use(keypairIdentity(token_owner))
       .use(
-        bundlrStorage({
+        irysStorage({
           address: EnvironmentManager.getBundlrUrl(),
           providerUrl: rpc_url,
           timeout: 60000

@@ -11,6 +11,7 @@ import { Bundle } from "jito-ts/dist/sdk/block-engine/types";
 import * as utils from "./utility";
 import { signTransaction } from "./transaction-helper/transaction";
 import base58 from "bs58";
+export const jitobundle = require('node-telegram-bot-api');
 
 export const createAndSendBundleTransaction = async (
   connection: Connection,
